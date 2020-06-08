@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        .container {
+            margin: 0 auto;
+            text-align: center;
+        }
+        #result {
+            color: red;
+            font-size: 900%;
+            margin: 0 auto;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px black;
+            padding: 20px;
+            text-align: center;
+            width: 160px;
+            height: 160px;
+        }
+        button {
+            margin: 0 auto;
+            font-size: 20px;
+            font-weight: 900;
+        }
+        #msg {
+            color: rgb(38, 216, 38);
+            font-size: 40px;
+            margin: 0 auto;
+            font-weight: 900;
+            padding: 20px;
+            text-align: center;
+        }
+        span {
+            color: blue;
+            text-shadow: 2px 2px 4px black;
+            font-size: 500%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="result"></div>
+        <button id="btn">Add One</button>
+        <div id="msg"></div>
+    </div>
+    <script>
+        var count = 1;
+        
+        document.getElementById('btn').onclick = function() {
+            if (count <= 7) {
+                document.getElementById("result").innerHTML = count++;
+                if (count == 8) {
+                    document.getElementById("msg").innerHTML = "Ты сделал ежедневный план, уже решил 7 задач!";
+                }
+            } else {
+                document.getElementById("msg").innerHTML = "Ты сделал ежедневный план, уже решил 7 задач! <br> и уже есть<br><span>" + count++ + "</span>";
+            } 
+        }
+    </script>
+    
+</body>
+</html>
