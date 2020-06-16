@@ -53,8 +53,17 @@
         document.getElementById('btn').onclick = function() {
             if (count <= 7) {
                 document.getElementById("result").innerHTML = count++;
+                switch (count) {
+                    case 5 : document.getElementById("result").style.color = "#ff6600";
+                    break;
+                    case 6 : document.getElementById("result").style.color = "#ffcc00";
+                    break;
+                    case 7 : document.getElementById("result").style.color = "#ffff00";
+                    break;
+                }
                 if (count == 8) {
-                    document.getElementById("msg").innerHTML = "Ты сделал ежедневный план, уже решил 7 задач!";
+                    document.getElementById("result").style.color = "#00ff00";
+                    document.getElementById("msg").innerHTML = "Ты сделал ежедневный план, уже решил 7 задач!";                    
                 }
             } else {
                 document.getElementById("msg").innerHTML = "Ты сделал ежедневный план, уже решил 7 задач! <br> и уже есть<br><span>" + count++ + "</span>";
