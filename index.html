@@ -44,29 +44,30 @@
 <body>
     <div class="container">
         <div id="result"></div>
-        <button id="btn">Add One</button>
+        <button id="btn">Добавить Одно</button>
         <div id="msg"></div>
     </div>
     <script>
-        var count = 1;
+        var counter = 0;
         
         document.getElementById('btn').onclick = function() {
-            if (count <= 7) {
-                document.getElementById("result").innerHTML = count++;
-                switch (count) {
-                    case 5 : document.getElementById("result").style.color = "#ff6600";
+            counter++;
+            if (counter <= 7) {
+                document.getElementById("result").innerHTML = counter;
+                switch (counter) {
+                    case 4 : document.getElementById("result").style.color = "#ff6600";
                     break;
-                    case 6 : document.getElementById("result").style.color = "#ffcc00";
+                    case 5 : document.getElementById("result").style.color = "#ffcc00";
                     break;
-                    case 7 : document.getElementById("result").style.color = "#ffff00";
+                    case 6 : document.getElementById("result").style.color = "#ffff00";
                     break;
                 }
-                if (count == 8) {
+                if (counter == 7) {
                     document.getElementById("result").style.color = "#00ff00";
-                    document.getElementById("msg").innerHTML = "Ты сделал ежедневный план, уже решил 7 задач!";                    
+                    document.getElementById("msg").innerHTML = "Уже сделан ежедневный план, уже решено 7 задач!";                    
                 }
             } else {
-                document.getElementById("msg").innerHTML = "Ты сделал ежедневный план, уже решил 7 задач! <br> и уже есть<br><span>" + count++ + "</span>";
+                document.getElementById("msg").innerHTML = "Уже сделан ежедневный план, уже решено 7 задач! <br> и уже есть<br><span>" + counter + "</span>";
             } 
         }
     </script>
