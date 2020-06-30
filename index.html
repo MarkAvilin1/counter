@@ -53,22 +53,22 @@
         
         document.getElementById('btn').onclick = function() {
             counter++;
-            if (counter <= 7) {
+            if (counter <= 4) {
                 document.getElementById("result").innerHTML = counter;
                 switch (counter) {
-                    case 4 : document.getElementById("result").style.color = "#ff6600";
+                    case 1 : document.getElementById("result").style.color = "#ff6600";
                     break;
-                    case 5 : document.getElementById("result").style.color = "#ffcc00";
+                    case 2 : document.getElementById("result").style.color = "#ffcc00";
                     break;
-                    case 6 : document.getElementById("result").style.color = "#ffff00";
+                    case 3 : document.getElementById("result").style.color = "#ffff00";
                     break;
                 }
-                if (counter == 7) {
+                if (counter == 4) {
                     document.getElementById("result").style.color = "#00ff00";
-                    document.getElementById("msg").innerHTML = "Уже сделан ежедневный план, уже решено 7 задач!";                    
+                    document.getElementById("msg").innerHTML = "Уже сделан ежедневный план, уже решено 4 задачи!";                    
                 }
             } else {
-                document.getElementById("msg").innerHTML = "Уже сделан ежедневный план, уже решено 7 задач! <br> и уже есть<br><span>" + counter + "</span>";
+                document.getElementById("msg").innerHTML = "Уже сделан ежедневный план, уже решено 4 задач! <br> и уже есть<br><span>" + counter + "</span>";
             } 
         }
     </script>
