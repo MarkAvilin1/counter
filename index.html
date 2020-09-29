@@ -45,26 +45,41 @@
 <body>
     <div class="container">
         <div id="result"></div>
-        <button id="btn">Добавить Одно</button>
+        <button id="btn">Добавить Шаг</button><button id="btn2">Убавить Шаг</button>
         <div id="msg"></div>
     </div>
     <script>
         var counter = 0;
+        document.getElementById('btn2').onclick = function() {
+        counter--;
+        }
         
         document.getElementById('btn').onclick = function() {
             counter++;
-            if (counter <= 4) {
+            if (counter <= 10) {
                 document.getElementById("result").innerHTML = counter;
                 switch (counter) {
-                    case 1 : document.getElementById("result").style.color = "#ff6600";
+                    case 1 : document.getElementById("result").style.color = "#fa0505";
                     break;
-                    case 2 : document.getElementById("result").style.color = "#ffcc00";
+                    case 2 : document.getElementById("result").style.color = "#fa4205";
                     break;
-                    case 3 : document.getElementById("result").style.color = "#ffff00";
+                    case 3 : document.getElementById("result").style.color = "#fa5305";
                     break;
+                    case 4 : document.getElementById("result").style.color = "#fa6f05";
+                    break;
+                    case 5 : document.getElementById("result").style.color = "#fa8c05";
+                    break;
+                    case 6 : document.getElementById("result").style.color = "#fab005";
+                    break;
+                    case 7 : document.getElementById("result").style.color = "#fadd05";
+                    break;
+                    case 8 : document.getElementById("result").style.color = "#c9fa05";
+                    break;
+                    case 9 : document.getElementById("result").style.color = "#0ec208";
+                    break;                  
                 }
-                if (counter == 4) {
-                    document.getElementById("result").style.color = "#00ff00";
+                if (counter == 10) {
+                    document.getElementById("result").style.color = "#63fa05";
                     document.getElementById("msg").innerHTML = "Уже сделан ежедневный план, уже решено 4 задачи!";                    
                 }
             } else {
