@@ -27,7 +27,7 @@
             font-weight: 900;
         }
         #msg {
-            color: rgb(38, 216, 38);
+            color: #0ec208;
             font-size: 40px;
             margin: 0 auto;
             font-weight: 900;
@@ -39,15 +39,20 @@
             text-shadow: 2px 2px 4px black;
             font-size: 500%;
         }
+        #bn2 {
+            font-size: 12px;
+            font-weight: 900;
+        }
 
     </style>
 </head>
 <body>
     <div class="container">
         <div id="result"></div>
-        <button id="btn">Добавить Шаг</button><button id="btn2">Убавить Шаг</button>
+        <button id="btn">Добавить Шаг</button>
         <div id="msg"></div>
     </div>
+    <button id="btn2">Убавить Шаг</button>
     <script>
         var counter = 0;
         document.getElementById('btn2').onclick = function() {
@@ -75,7 +80,7 @@
                     break;
                     case 8 : document.getElementById("result").style.color = "#c9fa05";
                     break;
-                    case 9 : document.getElementById("result").style.color = "#0ec208";
+                    case 9 : document.getElementById("result").style.color = "#99fa05";
                     break;                  
                 }
                 if (counter == 10) {
